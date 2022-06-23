@@ -26,8 +26,8 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
-# Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Changes from Qualcomm Innovation Center, Inc. are provided under the following license:
+# Copyright (c) 2022-2024 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #QTI file types
@@ -145,6 +145,10 @@ type vendor_qvrd_vndr_socket, file_type;
 #sxrservice sysfs files
 type vendor_sxrd_vndr_data_file, file_type, data_file_type;
 type vendor_sxrd_vndr_socket, file_type;
+
+#xrcommservice sysfs files
+type vendor_xrcommd_vndr_data_file, file_type, data_file_type;
+type vendor_xrcommd_socket, file_type;
 
 #GuestVM PIL files
 type vendor_sysfs_bootguestvm, fs_type, sysfs_type;

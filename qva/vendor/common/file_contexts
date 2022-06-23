@@ -79,6 +79,7 @@
 /dev/socket/qvrservice_vndr                     u:object_r:vendor_qvrd_vndr_socket:s0
 /dev/socket/qvrservice_vndr_camera              u:object_r:vendor_qvrd_vndr_socket:s0
 /dev/socket/sxrservice_vndr                     u:object_r:vendor_sxrd_vndr_socket:s0
+/dev/socket/xrcommservice                       u:object_r:vendor_xrcommd_socket:s0
 
 /dev/smcinvoke                                  u:object_r:tee_device:s0
 ###################################
@@ -178,6 +179,7 @@
 /(vendor|system/vendor)/bin/qms                                                    u:object_r:vendor_qms_exec:s0
 /(vendor|system/vendor)/bin/hw/qvrservice                                          u:object_r:vendor_qvrd_vndr_exec:s0
 /(vendor|system/vendor)/bin/hw/sxrservice                                          u:object_r:vendor_sxrd_vndr_exec:s0
+/(vendor|system/vendor)/bin/hw/xrcommservice                                       u:object_r:vendor_xrcommd_exec:s0
 /vendor/bin/trusteduilistener                                                      u:object_r:vendor_trusteduilistener_exec:s0
 /vendor/bin/modemManager                                                           u:object_r:vendor_modem_manager_exec:s0
 /vendor/bin/qsap_dcfd                                                              u:object_r:vendor_dcfd_exec:s0
@@ -260,6 +262,8 @@
 /data/vendor/qms_logs/main(/.*)?                                    u:object_r:vendor_qms_main_data_file:s0
 /data/vendor/qms_logs/other(/.*)?                                    u:object_r:vendor_qms_other_data_file:s0
 /data/vendor/qms_logs/config(/.*)?                                  u:object_r:vendor_qms_config_data_file:s0
+/data/vendor/xrcomm(/.*)?                                           u:object_r:vendor_xrcommd_vndr_data_file:s0
+
 ###################################
 # persist files
 #
