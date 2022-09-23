@@ -114,6 +114,7 @@
 /dev/byte-cntr                                  u:object_r:vendor_qdss_device:s0
 /dev/byte-cntr1                                 u:object_r:vendor_qdss_device:s0
 /dev/msm_adsp_sleepmon                          u:object_r:vendor_adsp_sleepmon_device:s0
+/dev/ubwcp                                      u:object_r:vendor_ubwcp_device:s0
 
 # dev socket nodes
 /dev/socket/chre                                u:object_r:vendor_chre_socket:s0
