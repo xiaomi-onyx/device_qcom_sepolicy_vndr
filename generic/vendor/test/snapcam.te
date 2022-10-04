@@ -36,6 +36,7 @@ app_domain(vendor_snapcam_app);
 
 allow vendor_snapcam_app cameraserver_service:service_manager find;
 get_prop(vendor_snapcam_app, vendor_persist_camera_prop)
+set_prop(vendor_snapcam_app, vendor_camera_prop)
 allow vendor_snapcam_app nfc_service:service_manager find;
 binder_call(vendor_snapcam_app, gpuservice)
 
@@ -45,3 +46,5 @@ allow vendor_snapcam_app audioserver_service:service_manager find;
 allow vendor_snapcam_app mediaextractor_service:service_manager find;
 allow vendor_snapcam_app mediametrics_service:service_manager find;
 allow vendor_snapcam_app mediaserver_service:service_manager find;
+
+get_prop(vendor_snapcam_app, camera_config_prop)
