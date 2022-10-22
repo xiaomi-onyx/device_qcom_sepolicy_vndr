@@ -84,6 +84,9 @@ userdebug_or_eng(`
 # Display service access
 binder_use(hal_camera_default)
 
+# Offline camera service access
+hal_attribute_service(hal_camera, vendor_hal_offlinecamera_service)
+
 # ADSP access
 allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;
 dontaudit hal_camera_default default_prop:file read;
