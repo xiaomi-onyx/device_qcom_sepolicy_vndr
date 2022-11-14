@@ -27,7 +27,7 @@
 
 # Changes from Qualcomm Innovation Center are provided under the following license:
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -271,3 +271,12 @@ type vendor_sysfs_rmnet, fs_type, sysfs_type;
 
 # display boot param files
 type vendor_sysfs_disp_boot_param, fs_type, sysfs_type;
+
+# TLPD service
+type vendor_dlsc_socket, file_type;
+
+type vendor_tlpd_socket, file_type;
+
+type vendor_tlpd_data_file, file_type, data_file_type;
+
+type vendor_dlsc_data_file, file_type, data_file_type;
