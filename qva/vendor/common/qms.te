@@ -92,6 +92,13 @@ hal_client_domain(vendor_qms,hal_wifi_supplicant)
 hal_client_domain(vendor_qms, hal_bluetooth)
 crash_dump_fallback(vendor_qms);
 
+net_domain(vendor_qms)
+
+#glink
+allow vendor_qms vendor_qmc_dma_device:chr_file rw_file_perms;
+allow vendor_qms vendor_qmc_cma_device:chr_file rw_file_perms;
+
+qtr_sdk_use(vendor_qms)
 # QMS child process
 allow vendor_qms self:process setcurrent;
 allow vendor_qms {
@@ -158,7 +165,6 @@ allow vendor_qms vendor_qms_service:service_manager find;
 
 wakelock_use(vendor_qms)
 
-qtr_sdk_use(vendor_qms)
 allow vendor_qms vendor_qms_vndr_data_file:dir create_dir_perms;
 allow vendor_qms vendor_qms_vndr_data_file:file create_file_perms;
 get_prop(vendor_qms, vendor_qms_prop)
