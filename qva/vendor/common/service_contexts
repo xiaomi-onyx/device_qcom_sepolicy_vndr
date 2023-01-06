@@ -53,3 +53,4 @@ vendor.qti.qesdhalaidl.IQesdhal/default                u:object_r:vendor_hal_qes
 vendor.qti.hardware.sensorscalibrate.ISensorsCalibrate/default           u:object_r:vendor_hal_sensorscalibrateaidl_service:s0
 android.hardware.drm.IDrmFactory/wfdhdcp               u:object_r:hal_drm_service:s0
 vendor.qti.hardware.qconfig.IQConfig/default                          u:object_r:vendor_hal_qconfig_service:s0
+vendor.qti.hardware.perf2.IPerf/default                u:object_r:vendor_hal_perf2_service:s0

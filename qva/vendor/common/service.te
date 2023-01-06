@@ -43,3 +43,4 @@ type vendor_hal_sensorscalibrateaidl_service, hal_service_type, protected_servic
 type vendor_hal_spu_service,             hal_service_type, protected_service, service_manager_type;
 type vendor_hal_nxpnfc_service,          hal_service_type, service_manager_type;
 type vendor_hal_qconfig_service,         hal_service_type, protected_service, service_manager_type;
+type vendor_hal_perf2_service,           hal_service_type, protected_service, service_manager_type;
