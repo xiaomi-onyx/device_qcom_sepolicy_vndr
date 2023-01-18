@@ -62,3 +62,7 @@ binder_call(vendor_hal_qccvndhal_server, vendor_hal_qccvndhal_client)
 
 #allow access to qccsyshal
 hal_client_domain(vendor_qccvendor, vendor_qccsyshal);
+
+
+# tombstone
+crash_dump_fallback(vendor_qccvendor)
