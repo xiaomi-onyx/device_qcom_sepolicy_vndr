@@ -1,4 +1,4 @@
-# Copyright (c) 2021-2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2021-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 # #
 # # Redistribution and use in source and binary forms, with or without
 # # modification, are permitted (subject to the limitations in the
@@ -32,3 +32,4 @@
 
 type vendor_hal_vnddisplayconfig_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_telephony_service2, hal_service_type, protected_service, service_manager_type;
+type vendor_hal_display_color_aidl_service, hal_service_type, protected_service, service_manager_type;

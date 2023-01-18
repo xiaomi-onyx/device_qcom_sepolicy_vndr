@@ -25,6 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
 android.hardware.neuralnetworks.IDevice/qti-default                   u:object_r:hal_neuralnetworks_service:s0
 android.hardware.neuralnetworks.IDevice/qti-gpu                       u:object_r:hal_neuralnetworks_service:s0
 android.hardware.neuralnetworks.IDevice/qti-dsp                       u:object_r:hal_neuralnetworks_service:s0
@@ -44,3 +48,5 @@ android.hardware.camera.provider.ICameraProvider/vendor_qti/0         u:object_r
 #Refer to b/236750094
 android.hardware.drm.IDrmFactory/widevine                             u:object_r:hal_drm_service:s0
 vendor.qti.hardware.wifi.supplicant.ISupplicantVendor/default         u:object_r:hal_wifi_supplicant_service:s0
+vendor.qti.hardware.display.color.IDisplayColor/default               u:object_r:vendor_hal_display_color_aidl_service:s0
+vendor.qti.hardware.display.postproc.IDisplayPostproc/default         u:object_r:vendor_hal_display_color_aidl_service:s0
