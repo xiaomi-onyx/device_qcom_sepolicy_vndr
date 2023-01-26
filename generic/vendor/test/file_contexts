@@ -89,7 +89,6 @@
 /(vendor|system/vendor)/bin/widevine(.*)                        u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/qseecom_sample_client               u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/isdbtmmtest                         u:object_r:vendor_sectest_exec:s0
-/(vendor|system/vendor)/bin/secure_ui_sample_client u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/qseecom_security_test               u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/qfipsverify                         u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/qseecom_assurance_test              u:object_r:vendor_sectest_exec:s0
