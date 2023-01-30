@@ -54,8 +54,6 @@ vndbinder_use(vendor_qccvendor)
 # allow qcc-vendor to add qccvndhal service to hwservicemanager
 hal_server_domain(vendor_qccvendor, vendor_hal_qccvndhal)
 
-hal_attribute_hwservice(vendor_hal_qccvndhal, vendor_hal_qccvndhal_hwservice)
-
 #Allow hwbinder call from hal client to server
 binder_call(vendor_hal_qccvndhal_client, vendor_hal_qccvndhal_server)
 binder_call(vendor_hal_qccvndhal_server, vendor_hal_qccvndhal_client)
