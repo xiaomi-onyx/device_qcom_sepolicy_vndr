@@ -34,4 +34,5 @@ hal_client_domain(system_app, vendor_hal_hbtp)
 hal_client_domain(system_app, vendor_hal_qdutils_disp);
 
 get_prop(system_app, vendor_radio_prop)
+get_prop(system_app, vendor_bluetooth_btadvaudio_prop)
 hal_client_domain(system_app, vendor_hal_capabilityconfigstore_qti);
