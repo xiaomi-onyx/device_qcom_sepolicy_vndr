@@ -101,3 +101,9 @@ hal_client_domain(vendor_qnicornd, vendor_hal_perf);
 
 # Allow qnicornd to search, connect, and write to shsc socket
 use_shsusrd_socket(vendor_qnicornd)
+
+# Allow qnicornd to use the connectivity_native library
+get_prop(vendor_qnicornd, boot_status_prop)
+allow vendor_qnicornd connectivity_native_service:service_manager find;
+binder_call(vendor_qnicornd, connectivity_native_service)
+binder_call(vendor_qnicornd, system_server)
