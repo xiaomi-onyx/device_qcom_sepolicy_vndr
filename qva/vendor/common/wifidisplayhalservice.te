@@ -54,12 +54,6 @@ hal_attribute_hwservice(vendor_wifidisplayhalservice, vendor_wifidisplayhalservi
 #Direct streaming native service
 add_service(vendor_wifidisplayhalservice_qti, vendor_wfdnativemm_service)
 
-#Allow access to firmware files for HDCP session
-r_dir_file(vendor_wifidisplayhalservice_qti, firmware_file)
-
-#Allow access to tee/ion device and tcp socket for HDCP sessions
-allow vendor_wifidisplayhalservice_qti tee_device:chr_file rw_file_perms;
-
 #Allow access to PCM sound card
 allow vendor_wifidisplayhalservice_qti audio_device:chr_file rw_file_perms;
 allow vendor_wifidisplayhalservice_qti audio_device:dir r_dir_perms;
@@ -99,14 +93,10 @@ allow vendor_wifidisplayhalservice_qti self:netlink_generic_socket create_socket
 #Allow communication with init over property server
 unix_socket_connect(vendor_wifidisplayhalservice_qti, property, init);
 
-#Allow ion device access
-allow vendor_wifidisplayhalservice_qti ion_device:chr_file r_file_perms;
-
 #Allow /dev/dma_heap file access
 allow vendor_wifidisplayhalservice_qti vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_wifidisplayhalservice_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
 allow vendor_wifidisplayhalservice_qti vendor_dmabuf_display_heap_device:chr_file r_file_perms;
-allow vendor_wifidisplayhalservice_qti vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
 allow vendor_wifidisplayhalservice_qti vendor_vm_cp_bitstream_device:chr_file r_file_perms;
 allow vendor_wifidisplayhalservice_qti vendor_membuf_dev:chr_file r_file_perms;
 
