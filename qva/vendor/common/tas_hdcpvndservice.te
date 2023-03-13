@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2021 The Linux Foundation. All rights reserved.
+# Copyright (c) 2023 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -30,47 +30,31 @@
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #Define Domain
-type vendor_wfdvndservice, domain;
-type vendor_wfdvndservice_exec, exec_type, vendor_file_type, file_type;
+type vendor_tsa_hdcpservice, domain;
+type vendor_tsa_hdcpservice_exec, exec_type, vendor_file_type, file_type;
 
-init_daemon_domain(vendor_wfdvndservice)
-
-#Allow net for hdcp connection
-net_domain(vendor_wfdvndservice)
+init_daemon_domain(vendor_tsa_hdcpservice)
 
 #Allow to use Vendor Binder IPC
-vndbinder_use(vendor_wfdvndservice)
+vndbinder_use(vendor_tsa_hdcpservice)
 
-#Allow to host sink hdcp vnd service
-add_service(vendor_wfdvndservice, vendor_wfdhdcpvndservice_service)
-binder_call(vendor_wfdvndservice, vendor_wfdhdcphalservice_qti);
+#Allow the interaction with servicemanager
+binder_use(vendor_tsa_hdcpservice)
+
+add_service(vendor_tsa_hdcpservice, vendor_tsa_hdcpvndservice)
 
 #Allow access to firmware files for HDCP session
-r_dir_file(vendor_wfdvndservice, firmware_file)
+r_dir_file(vendor_tsa_hdcpservice, firmware_file)
 
-#Allow for using fds
-allow vendor_wfdvndservice { mediacodec vendor_wfd_app vendor_wfdhdcphalservice_qti}:fd use;
+#Allow access to tee device for HDCP sessions
+allow vendor_tsa_hdcpservice tee_device:chr_file rw_file_perms;
 
-#Allow access to tee/ion device
-allow vendor_wfdvndservice tee_device:chr_file rw_file_perms;
-allow vendor_wfdvndservice ion_device:chr_file r_file_perms;
+binder_call(vendor_tsa_hdcpservice, vendor_wfdvndservice);
+binder_call(vendor_tsa_hdcpservice, vendor_wifidisplayhalservice_qti);
 
 #Allow /dev/dma_heap file access
-allow vendor_wfdvndservice vendor_dmabuf_system_heap_device:chr_file r_file_perms;
-allow vendor_wfdvndservice vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
-allow vendor_wfdvndservice vendor_dmabuf_display_heap_device:chr_file r_file_perms;
-allow vendor_wfdvndservice vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
-
-#Allow /dev/qce file access
-allow vendor_wfdvndservice vendor_qce_device:chr_file rw_file_perms;
-
-#Allow access to graphics_composer and qdisplay_service
-hal_client_domain(vendor_wfdvndservice, hal_graphics_composer);
-allow vendor_wfdvndservice vendor_qdisplay_service:service_manager find;
-
-#Fallback for seccomp
-crash_dump_fallback(vendor_wfdvndservice)
-
-binder_call(vendor_wfdvndservice, vendor_tsa_hdcpservice);
-
-allow vendor_wfdvndservice vendor_tsa_hdcpvndservice:service_manager find;
+allow vendor_tsa_hdcpservice vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_tsa_hdcpservice vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_tsa_hdcpservice vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+allow vendor_tsa_hdcpservice vendor_vm_cp_bitstream_device:chr_file r_file_perms;
+allow vendor_tsa_hdcpservice vendor_membuf_dev:chr_file r_file_perms;
