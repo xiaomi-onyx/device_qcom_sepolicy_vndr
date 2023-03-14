@@ -51,7 +51,6 @@ binder_call(vendor_hal_qesdhal_server, vendor_hal_qesdhal_client)
 hal_attribute_service(vendor_hal_qesdhal, vendor_hal_qesdhalaidl_service)
 
 binder_use(vendor_hal_qesdhal_default)
-allow vendor_hal_qesdhal_default tee_device:chr_file rw_file_perms;
 unix_socket_connect(vendor_hal_qesdhal_default, vendor_qesdsec, vendor_qesdsect);
 crash_dump_fallback(vendor_hal_qesdhal_default);
 
