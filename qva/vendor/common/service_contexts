@@ -42,6 +42,8 @@ vendor.qti.hardware.alarm.IAlarm/default               u:object_r:vendor_hal_ala
 vendor.qti.hardware.spu.ISPUManager/default            u:object_r:vendor_hal_spu_service:s0
 vendor.nxp.nxpnfc_aidl.INxpNfc/default                 u:object_r:vendor_hal_nxpnfc_service:s0
 
+vendor.qti.hardware.servicetrackeraidl.IServicetracker/default           u:object_r:vendor_hal_servicetrackeraidl_service:s0
+
 android.hardware.security.keymint.IKeyMintDevice/strongbox                u:object_r:hal_keymint_service:s0
 android.hardware.security.sharedsecret.ISharedSecret/strongbox            u:object_r:hal_sharedsecret_service:s0
 vendor.qti.qccvndhal_aidl.IQccvndhal/qccvndhal         u:object_r:vendor_hal_qccvndhal_service:s0
