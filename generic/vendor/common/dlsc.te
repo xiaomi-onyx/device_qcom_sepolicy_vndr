@@ -61,3 +61,4 @@ userdebug_or_eng(`
 
 #Allow ifconfig execution
 allow vendor_dlsc { vendor_shell_exec vendor_toolbox_exec }:file execute_no_trans;
+dontaudit vendor_dlsc vendor_sysfs_usb_node:dir { search };
