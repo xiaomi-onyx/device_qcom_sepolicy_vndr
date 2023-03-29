@@ -64,6 +64,7 @@
 type vendor_qms, domain;
 type vendor_qms_0, domain;
 type vendor_qms_1, domain;
+type vendor_qms_2, domain;
 type vendor_qms_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_qms)
 
@@ -108,19 +109,22 @@ allow vendor_qms self:process setcurrent;
 allow vendor_qms {
   vendor_qms_0
   vendor_qms_1
+  vendor_qms_2
 }:process dyntransition;
 
 neverallow { domain - vendor_qms } {
   vendor_qms_0
   vendor_qms_1
+  vendor_qms_2
 }:process dyntransition;
 
 neverallow vendor_qms ~{
   vendor_qms_0
   vendor_qms_1
+  vendor_qms_2
 }:process dyntransition;
 
-neverallow { vendor_qms_0 vendor_qms_1  } self:capability_class_set *;
+neverallow { vendor_qms_0 vendor_qms_1 vendor_qms_2  } self:capability_class_set *;
 
 allow vendor_qms_0 vendor_qms:fd use;
 allow vendor_qms_0 vendor_qms:unix_dgram_socket write;
@@ -141,6 +145,16 @@ allow vendor_qms_1 self:{
 }create_socket_perms_no_ioctl;
 qesdk_access(vendor_qms_1)
 crash_dump_fallback(vendor_qms_1);
+
+allow vendor_qms_2 vendor_qms:fd use;
+allow vendor_qms_2 vendor_qms:unix_dgram_socket write;
+allow vendor_qms_2 vendor_qms:unix_stream_socket { read write };
+allow vendor_qms_2 vendor_qms_exec:file execute_no_trans;
+allow vendor_qms_2 self:{
+    qipcrtr_socket
+}create_socket_perms_no_ioctl;
+qesdk_access(vendor_qms_2)
+crash_dump_fallback(vendor_qms_2);
 
 
 # allow qms to access wpa_socket
