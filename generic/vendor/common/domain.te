@@ -101,7 +101,6 @@ neverallow { domain
 - vendor_cdsprpcd
 - vendor_audioadsprpcd
 - hal_camera_default
-- vendor_chre
 - vendor_qvrd_vndr
 - vendor_vppservice
 - vendor_thermal-engine
