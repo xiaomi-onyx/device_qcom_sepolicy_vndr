@@ -58,4 +58,4 @@ vendor.qti.hardware.perf2.IPerf/default                u:object_r:vendor_hal_per
 vendor.qti.hardware.vpp.IVppService/default            u:object_r:vendor_hal_vpp_service:s0
 vendor.qti.hardware.power.powermodule.IPowerModule/default     u:object_r:vendor_hal_poweroptservice_service:s0
 vendor.qti.qhcp.IQHDC/default                          u:object_r:vendor_hal_qms_service:s0
-
+vendor.qti.hardware.qseecom.IQSEECom/default           u:object_r:vendor_hal_qseecom_service:s0
