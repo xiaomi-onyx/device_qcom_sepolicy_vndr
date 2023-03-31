@@ -202,7 +202,7 @@
 # hypervisor node
 /dev/hh_virtio.*                                                     u:object_r:vendor_virtio_chr_device:s0
 /dev/gh_virtio.*                                                     u:object_r:vendor_virtio_chr_device:s0
-/dev/gunyah                                                          u:object_r:vendor_gunyah_chr_device:s0
+/dev/gunyah                                                          u:object_r:vendor_gunyah_dev:s0
 /dev/qgunyah                                                         u:object_r:vendor_gunyah_chr_device:s0
 
 #subsys nodes
