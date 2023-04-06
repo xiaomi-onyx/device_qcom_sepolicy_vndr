@@ -52,3 +52,6 @@ allow vendor_hal_secureprocessor_qti vendor_vm_trusted_device:chr_file r_file_pe
 allow vendor_hal_secureprocessor_qti vendor_vm_self_device:chr_file r_file_perms;
 
 hal_client_domain(vendor_hal_secureprocessor_qti, hal_graphics_allocator);
+
+# For AIDL Service
+hal_attribute_service(vendor_hal_secureprocessor, vendor_hal_secureprocessor_aidl_service)
