@@ -55,3 +55,4 @@ vendor.qti.qspmhal.IQspmhal/default                           u:object_r:vendor_
 android.hardware.drm.IDrmFactory/wfdhdcp               u:object_r:hal_drm_service:s0
 vendor.qti.hardware.qconfig.IQConfig/default                          u:object_r:vendor_hal_qconfig_service:s0
 vendor.qti.hardware.perf2.IPerf/default                u:object_r:vendor_hal_perf2_service:s0
+vendor.qti.hardware.vpp.IVppService/default            u:object_r:vendor_hal_vpp_service:s0
