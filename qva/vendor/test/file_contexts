@@ -48,8 +48,9 @@
 /vendor/bin/qesdk-one                           u:object_r:vendor_hal_qesdonehal_default_exec:s0
 /data/vendor/qesdk_token(/.*)?                  u:object_r:vendor_qesd_one_token_data_file:s0
 
-# QESDK SAMPLE CLIENT
+# QESDK SAMPLE CLIENTS
 /vendor/bin/qsap_sampleclient                   u:object_r:vendor_qesdk_sampleclient_exec:s0
+/vendor/bin/qsap_sanity                         u:object_r:vendor_qesdk_sanity_qsap_exec:s0
 
 #QVIRTSERVICE SAMPLE CLIENT
 /vendor/bin/qvirt-testclient                    u:object_r:vendor_qvirt_testclient_exec:s0
