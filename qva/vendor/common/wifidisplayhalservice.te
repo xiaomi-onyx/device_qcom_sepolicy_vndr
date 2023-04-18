@@ -25,6 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
 #Define Domain
 type vendor_wifidisplayhalservice_qti, domain;
 type vendor_wifidisplayhalservice_qti_exec, exec_type, vendor_file_type, file_type;
@@ -127,3 +131,7 @@ allow vendor_wifidisplayhalservice_qti uhid_device:chr_file rw_file_perms;
 
 #Fallback for seccomp
 crash_dump_fallback(vendor_wifidisplayhalservice_qti)
+
+allow vendor_wifidisplayhalservice_qti vendor_tsa_hdcpvndservice:service_manager find;
+
+binder_call(vendor_wifidisplayhalservice_qti, vendor_tsa_hdcpservice);
