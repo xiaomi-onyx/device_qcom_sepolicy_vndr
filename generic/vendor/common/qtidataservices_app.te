@@ -85,6 +85,8 @@ allow vendor_qtidataservices_app vendor_sysfs_data:file r_file_perms;
 net_domain(vendor_qtidataservices_app)
 hal_client_domain(vendor_qtidataservices_app, vendor_hal_perf)
 
+hal_attribute_service(vendor_hal_cacertservice_qti,vendor_hal_cacert_aidlservice)
+
 allow vendor_qtidataservices_app vendor_qnicornd:fd use;
 allow vendor_qtidataservices_app vendor_qnicornd:udp_socket { getattr getopt read write };
 
