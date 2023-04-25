@@ -1,4 +1,4 @@
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -38,3 +38,6 @@ init_daemon_domain(vendor_hal_weaver_default)
 binder_call(vendor_hal_weaver_default, secure_element);
 
 allow vendor_hal_weaver_default secure_element_service:service_manager find;
+allow vendor_hal_weaver_default self:capability2 wake_alarm;
+
+get_prop(vendor_hal_weaver_default, boot_status_prop)

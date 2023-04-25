@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2021, 2023, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -95,7 +95,8 @@
 /vendor/bin/hw/android\.hardware\.security\.keymint-service-spu-qti                u:object_r:vendor_hal_keymint_spu_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.strongbox             u:object_r:vendor_hal_keymint_strongbox_exec:s0
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.strongbox-thales      u:object_r:vendor_hal_keymint_strongbox_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.weaver@1\.0-service              u:object_r:vendor_hal_weaver_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.weaver-service\.nxp              u:object_r:vendor_hal_weaver_default_exec:s0
+/vendor/bin/hw/android\.hardware\.authsecret-service\.nxp                          u:object_r:hal_authsecret_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.cryptfshw@1\.0-service-qti                   u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.authsecret@1\.0-service-qti                      u:object_r:vendor_hal_authsecret_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.drm@[0-9]+\.[0-9]+-service\.clearkey             u:object_r:vendor_hal_drm_clearkey_exec:s0
