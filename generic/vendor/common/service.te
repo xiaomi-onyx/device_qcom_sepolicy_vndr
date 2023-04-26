@@ -36,6 +36,7 @@
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_hal_factory_aidlservice, hal_service_type, protected_service, service_manager_type;
+type vendor_hal_cacert_aidlservice,hal_service_type,protected_service,service_manager_type;
 type vendor_hal_vnddisplayconfig_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_alarm_qti_aidl_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_telephony_service2, hal_service_type, protected_service, service_manager_type;
