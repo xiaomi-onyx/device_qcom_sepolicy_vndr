@@ -99,6 +99,10 @@ allow vendor_qms vendor_qmc_dma_device:chr_file rw_file_perms;
 allow vendor_qms vendor_qmc_cma_device:chr_file rw_file_perms;
 
 qtr_sdk_use(vendor_qms)
+
+userdebug_or_eng(`
+unix_socket_connect(vendor_qms, logdr, logd);
+')
 # QMS child process
 allow vendor_qms self:process setcurrent;
 allow vendor_qms {
