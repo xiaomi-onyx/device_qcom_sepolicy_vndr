@@ -46,4 +46,6 @@ userdebug_or_eng(`
   get_prop(vendor_hal_gnss_qti, vendor_mink_trace_prop)
 ')
 
+hal_client_domain(vendor_hal_gnss_qti, vendor_hal_qms_qti);
+
 allow hal_gnss self:qipcrtr_socket create_socket_perms_no_ioctl;
