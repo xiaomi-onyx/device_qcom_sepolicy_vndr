@@ -66,3 +66,6 @@ allow vendor_hal_trustedui_qti vendor_vm_self_device:chr_file {open read};
 allow vendor_hal_trustedui_qti vendor_dmabuf_display_heap_device:chr_file r_file_perms;
 allow vendor_hal_trustedui_qti vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_hal_trustedui_qti vendor_membuf_dev:chr_file r_file_perms;
+
+#AIDL service specific
+hal_attribute_service(vendor_hal_trustedui, vendor_hal_trustedui_aidl_service)
