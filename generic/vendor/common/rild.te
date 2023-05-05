@@ -45,6 +45,7 @@ allow rild vendor_radio_vendor_data_file:file create_file_perms;
 userdebug_or_eng(`
   allow rild vendor_diag_device:chr_file rw_file_perms;
   get_prop(rild, vendor_pd_locater_dbg_prop)
+  get_prop(rild, vendor_mink_trace_prop)
 ')
 
 hal_server_domain(rild, hal_secure_element)
