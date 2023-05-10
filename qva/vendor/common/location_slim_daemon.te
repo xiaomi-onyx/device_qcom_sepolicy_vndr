@@ -56,6 +56,8 @@ hwbinder_use(vendor_location_slim_daemon)
 get_prop(vendor_location_slim_daemon, hwservicemanager_prop)
 binder_call(vendor_location_slim_daemon, system_server)
 
+binder_use(vendor_location_slim_daemon)
+
 # allows shell execute slim_daemon in userdebug mode.
 userdebug_or_eng(`
   allow shell vendor_location_slim_daemon_exec:file rx_file_perms;
