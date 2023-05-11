@@ -1,4 +1,4 @@
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -41,3 +41,5 @@ binder_call(vendor_hal_keymint_strongbox, secure_element);
 get_prop(vendor_hal_keymint_strongbox, vendor_security_patch_level_prop);
 
 allow vendor_hal_keymint_strongbox secure_element_service:service_manager find;
+
+allow vendor_hal_keymint_strongbox self:capability2 wake_alarm;
