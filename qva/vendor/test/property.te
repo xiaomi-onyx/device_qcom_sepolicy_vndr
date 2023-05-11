@@ -37,3 +37,5 @@ vendor_internal_prop(vendor_qesdk_one_prop);
 
 #minksocket trace property
 vendor_internal_prop(vendor_mink_trace_prop)
+#Episteme prop
+vendor_restricted_prop(vendor_episteme_prop);
