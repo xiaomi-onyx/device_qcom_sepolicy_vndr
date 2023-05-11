@@ -80,6 +80,7 @@ hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsfactory_hwservice)
 hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsrcsd_hwservice)
 hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imscallinfo_hwservice)
 
+hal_attribute_service(vendor_hal_imsfactory, vendor_aidl_imsfactory_service)
 
 # imsdaemon needs read/write access to devpts
 allow vendor_ims_service devpts:chr_file rw_file_perms;

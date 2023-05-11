@@ -38,8 +38,9 @@ hal_client_domain(vendor_dataservice_app , vendor_hal_datafactory_qti)
 
 hal_client_domain(vendor_dataservice_app , vendor_hal_perf)
 
-# dataservice_app is a client of ImsFactory HAL
+# dataservice_app is a client of ImsFactory HAL and AIDL
 hal_client_domain(vendor_dataservice_app, vendor_hal_imsfactory)
 
 # dataservice_app is a client of ImsDataService stable AIDL
 hal_client_domain(vendor_dataservice_app, vendor_hal_dcservice_qti)
+
