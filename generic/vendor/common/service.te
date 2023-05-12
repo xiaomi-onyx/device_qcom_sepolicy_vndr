@@ -51,3 +51,5 @@ type vendor_hal_imsrtp_service,       hal_service_type, protected_service, servi
 type vendor_hal_embmsslaidl_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_dataconnection_aidl_service, hal_service_type, protected_service, service_manager_type;
 type vendor_aidl_imsfactory_service,   hal_service_type, protected_service, service_manager_type;
+type vendor_hal_iwlan_service, hal_service_type, protected_service, service_manager_type;
+

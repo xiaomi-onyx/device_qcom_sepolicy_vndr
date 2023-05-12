@@ -70,3 +70,6 @@ vendor.qti.hardware.data.connectionaidl.IDataConnection/slot1         u:object_r
 vendor.qti.hardware.data.connectionaidl.IDataConnection/slot2         u:object_r:vendor_hal_dataconnection_aidl_service:s0
 vendor.qti.hardware.cacertservice.IService/default                    u:object_r:vendor_hal_cacert_aidlservice:s0
 vendor.qti.ims.factoryaidlservice.IImsFactory/default                 u:object_r:vendor_aidl_imsfactory_service:s0
+vendor.qti.hardware.data.iwlandata.IIWlan/slot1                       u:object_r:vendor_hal_iwlan_service:s0
+vendor.qti.hardware.data.iwlandata.IIWlan/slot2                       u:object_r:vendor_hal_iwlan_service:s0
+
