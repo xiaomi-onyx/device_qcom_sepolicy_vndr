@@ -48,6 +48,7 @@ vendor.qti.hardware.servicetrackeraidl.IServicetracker/default           u:objec
 
 android.hardware.security.keymint.IKeyMintDevice/strongbox                u:object_r:hal_keymint_service:s0
 android.hardware.security.sharedsecret.ISharedSecret/strongbox            u:object_r:hal_sharedsecret_service:s0
+android.hardware.authsecret.qti.spu.IAuthSecret/default                   u:object_r:hal_authsecret_service:s0
 vendor.qti.qccvndhal_aidl.IQccvndhal/qccvndhal         u:object_r:vendor_hal_qccvndhal_service:s0
 android.hardware.security.keymint.IRemotelyProvisionedComponent/strongbox u:object_r:hal_keymint_service:s0
 vendor.qti.hardware.factory.IFactory/default                              u:object_r:vendor_hal_factory_service:s0
