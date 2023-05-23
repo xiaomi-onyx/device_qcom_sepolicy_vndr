@@ -192,3 +192,5 @@ allow vendor_qms vendor_qms_vndr_data_file:file create_file_perms;
 get_prop(vendor_qms, vendor_qms_prop)
 allow vendor_qms vendor_qms_app:udp_socket { read write };
 allow vendor_qms vendor_qms_app:tcp_socket { connect getopt read write };
+
+use_shsusrd_socket(vendor_qms)
