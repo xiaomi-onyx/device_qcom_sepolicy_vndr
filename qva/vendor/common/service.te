@@ -57,3 +57,4 @@ type vendor_hal_dpmaidl_service,hal_service_type, protected_service, service_man
 type vendor_hal_soteraidl_service,       hal_service_type, protected_service, service_manager_type;
 type vendor_aidl_hal_pasrmanager_memory_service,	service_manager_type, hal_service_type, protected_service;
 type vendor_hal_authsecret_service,      hal_service_type,protected_service,service_manager_type;
+type vendor_hal_secureprocessor_aidl_service, hal_service_type,  protected_service, service_manager_type;
