@@ -49,6 +49,9 @@ r_dir_file(vendor_tsa_hdcpservice, firmware_file)
 #Allow access to tee device for HDCP sessions
 allow vendor_tsa_hdcpservice tee_device:chr_file rw_file_perms;
 
+#Allow /dev/qce file access
+allow vendor_tsa_hdcpservice vendor_qce_device:chr_file rw_file_perms;
+
 binder_call(vendor_tsa_hdcpservice, vendor_wfdvndservice);
 binder_call(vendor_tsa_hdcpservice, vendor_wifidisplayhalservice_qti);
 
