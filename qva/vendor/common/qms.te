@@ -194,3 +194,9 @@ allow vendor_qms vendor_qms_app:udp_socket { read write };
 allow vendor_qms vendor_qms_app:tcp_socket { connect getopt read write };
 
 use_shsusrd_socket(vendor_qms)
+
+# Policies needed for QMS
+allow vendor_qms vendor_xtra_service:service_manager find;
+binder_call(vendor_qms, vendor_location_xtra_daemon)
+allow vendor_qms vendor_sysfs_battery_supply:dir search;
+allow vendor_qms vendor_sysfs_battery_supply:file { open read };
