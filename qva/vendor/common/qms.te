@@ -90,7 +90,7 @@ allow vendor_qms connectivity_native_service:service_manager find;
 binder_call(vendor_qms, connectivity_native_service)
 binder_call(vendor_qms, system_server)
 allow vendor_qms self:netlink_route_socket nlmsg_readpriv;
-allow vendor_qms  proc_net:file { w_file_perms getattr };
+allow vendor_qms  proc_net:file rw_file_perms;
 
 hal_client_domain(vendor_qms,hal_wifi_hostapd)
 hal_client_domain(vendor_qms,hal_wifi_supplicant)
