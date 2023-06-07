@@ -63,4 +63,7 @@ crash_dump_fallback(vendor_wfdvndservice)
 
 binder_call(vendor_wfdvndservice, vendor_tsa_hdcpservice);
 
+#Allow the interaction with servicemanager
+binder_use(vendor_wfdvndservice)
+
 allow vendor_wfdvndservice vendor_tsa_hdcpvndservice:service_manager find;
