@@ -64,3 +64,5 @@ allow vendor_sec_nvm vendor_sp_ssr_device:chr_file rw_file_perms;
 set_prop(vendor_sec_nvm, vendor_spcomlib_prop)
 allow vendor_sec_nvm vendor_sec_nvm_device:chr_file rw_file_perms;
 allow vendor_sec_nvm vendor_spss_utils_device:chr_file rw_file_perms;
+
+get_prop(vendor_sec_nvm, boot_status_prop)
