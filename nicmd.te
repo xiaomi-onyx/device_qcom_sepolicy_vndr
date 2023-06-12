@@ -85,9 +85,6 @@ allow vendor_nicmd self:capability { net_admin net_raw setgid setpcap setuid kil
 # Allow nicmd to search, connect, and write to shsc socket
 use_shsusrd_socket(vendor_nicmd)
 
-# Allow vendor_nicmd to set vendor properties
-set_prop(vendor_nicmd, vendor_data_ko_prop)
-
 # Allow nicmd to use shsusrd properties
 set_prop(vendor_nicmd, vendor_data_shsusr_prop)
 set_prop(vendor_nicmd, vendor_data_qmipriod_prop)

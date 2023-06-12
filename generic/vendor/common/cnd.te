@@ -101,10 +101,6 @@ wakelock_use(vendor_cnd)
 allow vendor_cnd vendor_ipa_vendor_data_file:dir r_dir_perms;
 allow vendor_cnd vendor_ipa_vendor_data_file:file r_file_perms;
 
-qnicorn_socket(vendor_cnd)
-allow vendor_cnd vendor_qnicornd:fd use;
-allow vendor_cnd vendor_qnicornd:udp_socket { read write };
-
 nicm_socket(vendor_cnd)
 allow vendor_cnd vendor_nicmd:fd use;
 allow vendor_cnd vendor_nicmd:udp_socket { read write };

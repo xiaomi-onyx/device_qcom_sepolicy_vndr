@@ -28,9 +28,6 @@ binder_call(rild, vendor_per_mgr)
 
 vndbinder_use(rild)
 
-allow rild vendor_netmgrd_socket:dir search;
-unix_socket_connect(rild, vendor_netmgrd, vendor_netmgrd)
-
 allow rild vendor_file:file { execute_no_trans lock ioctl };
 allow rild self:tipc_socket { create_socket_perms_no_ioctl };
 allow rild vendor_per_mgr_service:service_manager find;
