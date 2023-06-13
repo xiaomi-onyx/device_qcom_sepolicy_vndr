@@ -197,3 +197,7 @@ genfscon sysfs /kernel/camera/subparts_info u:object_r:vendor_sysfs_camera:s0
 
 genfscon sysfs /kernel/qts/primary/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
 genfscon sysfs /kernel/qts/secondary/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-adsp/power/wakeup     u:object_r:vendor_sysfs_cpsk_power:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-cdsp/power/wakeup     u:object_r:vendor_sysfs_cpsk_power:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-modem/power/wakeup     u:object_r:vendor_sysfs_cpsk_power:s0
