@@ -124,4 +124,7 @@ crash_dump_fallback(vendor_wifidisplayhalservice_qti)
 
 allow vendor_wifidisplayhalservice_qti vendor_tsa_hdcpvndservice:service_manager find;
 
+#Allow the interaction with servicemanager
+binder_use(vendor_wifidisplayhalservice_qti)
+
 binder_call(vendor_wifidisplayhalservice_qti, vendor_tsa_hdcpservice);
