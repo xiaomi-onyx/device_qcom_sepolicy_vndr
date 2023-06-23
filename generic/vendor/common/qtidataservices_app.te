@@ -85,6 +85,7 @@ allow vendor_qtidataservices_app vendor_sysfs_data:file r_file_perms;
 net_domain(vendor_qtidataservices_app)
 hal_client_domain(vendor_qtidataservices_app, vendor_hal_perf)
 
+binder_use(vendor_qtidataservices_app)
 hal_attribute_service(vendor_hal_cacertservice_qti,vendor_hal_cacert_aidlservice)
 
 allow vendor_qtidataservices_app vendor_nicmd:fd use;

@@ -68,7 +68,7 @@ vendor.qti.ImsRtpService.IRTPService/ImsRtpService                    u:object_r
 vendor.qti.hardware.embmssl.IEmbms/default                            u:object_r:vendor_hal_embmsslaidl_service:s0
 vendor.qti.hardware.data.connectionaidl.IDataConnection/slot1         u:object_r:vendor_hal_dataconnection_aidl_service:s0
 vendor.qti.hardware.data.connectionaidl.IDataConnection/slot2         u:object_r:vendor_hal_dataconnection_aidl_service:s0
-vendor.qti.hardware.cacertservice.IService/default                    u:object_r:vendor_hal_cacert_aidlservice:s0
+vendor.qti.hardware.cacertaidlservice.IService/default                u:object_r:vendor_hal_cacert_aidlservice:s0
 vendor.qti.ims.factoryaidlservice.IImsFactory/default                 u:object_r:vendor_aidl_imsfactory_service:s0
 vendor.qti.hardware.data.iwlandata.IIWlan/slot1                       u:object_r:vendor_hal_iwlan_service:s0
 vendor.qti.hardware.data.iwlandata.IIWlan/slot2                       u:object_r:vendor_hal_iwlan_service:s0
