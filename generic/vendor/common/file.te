@@ -123,6 +123,7 @@ type vendor_rild_socket, file_type;
 type vendor_shsusrd_socket, file_type;
 type vendor_port-bridge_socket, file_type;
 type vendor_thermal_socket, file_type;
+type vendor_qlm_socket, file_type;
 type vendor_notify-topology_socket, file_type;
 type vendor_vuidmgr_socket, file_type;
 

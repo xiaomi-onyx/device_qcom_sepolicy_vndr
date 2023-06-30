@@ -124,6 +124,7 @@
 /dev/socket/ipacm_log_file                      u:object_r:vendor_ipacm_socket:s0
 /dev/socket/cnd                                 u:object_r:vendor_cnd_socket:s0
 /dev/socket/ims_datad                           u:object_r:vendor_ims_service_socket:s0
+/dev/socket/qlm_service                         u:object_r:vendor_qlm_socket:s0
 /dev/socket/thermal-send-client                 u:object_r:vendor_thermal_socket:s0
 /dev/socket/thermal-recv-client                 u:object_r:vendor_thermal_socket:s0
 /dev/socket/thermal-recv-passive-client         u:object_r:vendor_thermal_socket:s0
@@ -222,6 +223,7 @@
 /vendor/bin/hw/android.hardware.thermal-service.qti      u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/hw/vendor.qti.hardware.limits@1.1-service    u:object_r:vendor_limits-hal_exec:s0
 /vendor/bin/hw/vendor.qti.hardware.limits@1.2-service    u:object_r:vendor_limits-hal_exec:s0
+/vendor/bin/qlm-service         u:object_r:vendor_qlm_service_exec:s0
 /vendor/bin/sensors.qti         u:object_r:vendor_sensors_qti_exec:s0
 /vendor/bin/qsap_sensors        u:object_r:vendor_sensors_qesdk_exec:s0
 /vendor/bin/ssr_setup           u:object_r:vendor_ssr_setup_exec:s0
