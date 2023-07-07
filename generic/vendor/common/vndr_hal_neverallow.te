@@ -51,6 +51,7 @@ neverallow {
   -vendor_cnd
   -vendor_hal_datafactory_qti
   -vendor_hal_sxrservice_qti
+  -vendor_hal_qvrservice_qti
   -vendor_hal_fstman
   -vendor_wifidisplayhalservice_qti
   -vendor_ims_service
