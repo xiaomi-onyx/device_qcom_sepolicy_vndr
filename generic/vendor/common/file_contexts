@@ -193,6 +193,7 @@
 # mem_buf_vm device end points to be used in inter-VM memory transactions
 /dev/mem_buf_vm/qcom,self			u:object_r:vendor_vm_self_device:s0
 /dev/mem_buf_vm/qcom,trusted_vm			u:object_r:vendor_vm_trusted_device:s0
+/dev/mem_buf_vm/qcom,oemvm			u:object_r:vendor_vm_oem_device:s0
 /dev/mem_buf_vm/qcom,hlos			u:object_r:vendor_vm_hlos_device:s0
 /dev/mem_buf_vm/qcom,cp_touch			u:object_r:vendor_vm_cp_touch_device:s0
 /dev/mem_buf_vm/qcom,cp_bitstream		u:object_r:vendor_vm_cp_bitstream_device:s0
