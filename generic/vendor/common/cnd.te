@@ -123,5 +123,6 @@ unix_socket_connect(vendor_cnd, vendor_ssgtzd, vendor_ssgtzd)
 #diag
 userdebug_or_eng(`
     diag_use(vendor_cnd)
-	r_dir_file(vendor_cnd, vendor_sysfs_diag)
+    r_dir_file(vendor_cnd, vendor_sysfs_diag)
+    get_prop(vendor_cnd, vendor_mink_trace_prop)
 ')
