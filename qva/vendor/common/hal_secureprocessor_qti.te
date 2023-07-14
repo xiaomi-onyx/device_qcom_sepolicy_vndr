@@ -50,6 +50,7 @@ allow vendor_hal_secureprocessor_qti self:qipcrtr_socket create_socket_perms_no_
 allow vendor_hal_secureprocessor_qti vendor_membuf_dev:chr_file r_file_perms;
 allow vendor_hal_secureprocessor_qti vendor_vm_trusted_device:chr_file r_file_perms;
 allow vendor_hal_secureprocessor_qti vendor_vm_self_device:chr_file r_file_perms;
+allow vendor_hal_secureprocessor_qti vendor_vm_oem_device:chr_file r_file_perms;
 
 hal_client_domain(vendor_hal_secureprocessor_qti, hal_graphics_allocator);
 
