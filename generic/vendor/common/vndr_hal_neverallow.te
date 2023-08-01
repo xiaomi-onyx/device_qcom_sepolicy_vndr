@@ -58,7 +58,6 @@ neverallow {
   -vendor_ims_dcservice
   -vendor_dpmd_vndr
   -vendor_qtidataservices_app
-  -vendor_hal_dpmQmiMgr
   -vendor_qms
   -vendor_hal_imsrtp
   userdebug_or_eng(` -vendor_hal_diaghal')
