@@ -86,7 +86,6 @@
 # System files
 #
 
-/(vendor|system/vendor)/bin/dpmQmiMgr                                              u:object_r:vendor_hal_dpmQmiMgr_exec:s0
 /vendor/bin/vendor.dpmd                                                            u:object_r:vendor_dpmd_vndr_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.0-strongbox-service-qti             u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-strongbox-service-qti             u:object_r:vendor_hal_keymaster_qti_exec:s0
