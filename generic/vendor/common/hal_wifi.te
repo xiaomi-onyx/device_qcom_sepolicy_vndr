@@ -51,6 +51,7 @@ allow hal_wifi_default vendor_wifihal_socket:sock_file create_file_perms;
 
 # Write wlan driver/fw version into property
 set_prop(hal_wifi_default, vendor_wifi_version)
+get_prop(hal_wifi_server, vendor_bluetooth_wifi_prop)
 
 # allow hal_wifi to write into /proc/sys/net/ipv4
 allow hal_wifi proc_net:file write;

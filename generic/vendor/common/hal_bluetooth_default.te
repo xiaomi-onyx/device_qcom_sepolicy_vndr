@@ -31,6 +31,7 @@ allow hal_bluetooth fwk_scheduler_hwservice:hwservice_manager find;
 allow hal_bluetooth system_server:binder call;
 
 # bluetooth properties
+set_prop(hal_bluetooth, vendor_bluetooth_wifi_prop)
 set_prop(hal_bluetooth, vendor_bluetooth_prop)
 set_prop(hal_bluetooth, vendor_bluetooth_btadvaudio_prop)
 
