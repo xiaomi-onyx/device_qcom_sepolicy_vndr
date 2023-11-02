@@ -26,7 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 # Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -169,6 +169,10 @@ genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qco
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:qcom,leds@ef00/leds/red u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:qcom,leds@ef00/leds/green u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:qcom,leds@ef00/leds/blue u:object_r:vendor_sysfs_graphics:s0
+
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:led-controller/leds/red u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:led-controller/leds/green u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:led-controller/leds/blue u:object_r:vendor_sysfs_graphics:s0
 
 # PMIC devices wakeup nodes
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8550@0:rtc@6100/wakeup u:object_r:sysfs_wakeup:s0
