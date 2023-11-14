@@ -54,3 +54,4 @@ type vendor_aidl_imsfactory_service,   hal_service_type, protected_service, serv
 type vendor_hal_iwlan_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_trustedui_aidl_service, hal_service_type, protected_service, service_manager_type;
 type vendor_qms_service, service_manager_type;
+type vendor_hal_capabilityconfigstore_service, hal_service_type, protected_service, service_manager_type;
