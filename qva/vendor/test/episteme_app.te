@@ -8,3 +8,5 @@ hal_client_domain(vendor_episteme_app, vendor_hal_qms_qti);  # for IQEPI
 net_domain(vendor_episteme_app)
 hal_client_domain(vendor_episteme_app, vendor_hal_qesdhal)
 get_prop(vendor_episteme_app, vendor_episteme_prop)
+dontaudit vendor_episteme_app vendor_hal_perf2_service:service_manager find;
+dontaudit vendor_episteme_app vendor_hal_perf_hwservice:hwservice_manager find;
