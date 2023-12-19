@@ -31,6 +31,8 @@ type vendor_audioftm_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_audioftm)
 domain_auto_trans(vendor_mmi, vendor_audioftm_exec, vendor_audioftm)
 
+binder_call(vendor_audioftm, servicemanager)
+
 allow vendor_audioftm vendor_audioftm_exec:file { rx_file_perms entrypoint };
 
 allow vendor_audioftm vendor_proc_audiod:file r_file_perms;
