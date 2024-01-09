@@ -41,3 +41,7 @@ unix_socket_connect(hal_bluetooth_default, vendor_ssgtzd, vendor_ssgtzd)
 # BT Tpi service
 hal_attribute_service(hal_bluetooth, vendor_hal_bttpi_service)
 binder_call(hal_bluetooth, servicemanager)
+
+allow hal_bluetooth_default self:netlink_generic_socket { bind create getattr read setopt write };
+allow hal_bluetooth_default self:udp_socket create_socket_perms;
+allowxperm hal_bluetooth_default self:udp_socket ioctl { SIOCSIFFLAGS };
