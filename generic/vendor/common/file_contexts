@@ -88,7 +88,13 @@
 /dev/spcom                                      u:object_r:vendor_spcom_device:s0
 /dev/jpeg[0-9]*                                 u:object_r:video_device:s0
 /dev/adsprpc-smd                                u:object_r:vendor_qdsp_device:s0
+/dev/fastrpc-adsp                               u:object_r:vendor_qdsp_device:s0
+/dev/fastrpc-cdsp                               u:object_r:vendor_qdsp_device:s0
+/dev/fastrpc-sdsp                               u:object_r:vendor_qdsp_device:s0
 /dev/adsprpc-smd-secure                         u:object_r:vendor_xdsp_device:s0
+/dev/fastrpc-adsp-secure                        u:object_r:vendor_xdsp_device:s0
+/dev/fastrpc-cdsp-secure                        u:object_r:vendor_xdsp_device:s0
+/dev/fastrpc-sdsp-secure                        u:object_r:vendor_xdsp_device:s0
 /dev/sdsprpc-smd                                u:object_r:vendor_dsp_device:s0
 /dev/msm_audio_ion                              u:object_r:vendor_agm_device:s0
 /dev/aud_pasthru_adsp                           u:object_r:vendor_agm_device:s0
