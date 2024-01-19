@@ -16,3 +16,5 @@ allow vendor_dcfd self:qipcrtr_socket create_socket_perms_no_ioctl;
 #add rules to get tombstone files
 crash_dump_fallback(vendor_dcfd)
 
+# Allow to request wakelock from system-suspend.
+wakelock_use(vendor_dcfd)
