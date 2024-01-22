@@ -13,7 +13,7 @@ allow vendor_qesdsect vendor_qesdk_service:service_manager find;
 
 binder_use(vendor_qesdsect);
 
-allow vendor_qesdsect tee_device:chr_file rw_file_perms;
+unix_socket_connect(vendor_qesdsect, vendor_ssgtzd, vendor_ssgtzd)
 crash_dump_fallback(vendor_qesdsect);
 
 #allow qesdsec to read boot complete prop
