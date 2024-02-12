@@ -43,3 +43,7 @@ hal_client_domain(platform_app, vendor_hal_pasrmanager)
 
 # allow platform_app access to NFC service
 allow platform_app nfc_service:service_manager find;
+
+#allow platform_app to interact with wifimyftm hal
+hal_client_domain(platform_app, vendor_hal_wifilearner);
+allow platform_app vendor_hal_wifilearner_service:service_manager find;
