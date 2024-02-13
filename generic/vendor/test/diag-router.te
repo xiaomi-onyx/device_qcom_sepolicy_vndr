@@ -49,4 +49,7 @@ userdebug_or_eng(`
   allow vendor_diag-router  vendor_sysfs_qdss_dev:file w_file_perms;
   allow { domain -coredomain -hal_configstore -vendor_init} vendor_diag-router:unix_stream_socket connectto;
   allow vendor_diag-router kmsg_device:chr_file {getattr write open};
+
+  hal_attribute_service(vendor_hal_diaghal, vendor_hal_diaghal_service)
+  binder_call(vendor_hal_diaghal_server, servicemanager)
 ')
