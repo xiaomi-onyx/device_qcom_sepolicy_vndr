@@ -25,8 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Changes from Qualcomm Innovation Center, Inc. are provided under the following license:
+# Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #Define Domain
@@ -53,9 +53,6 @@ hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplaysession_servi
 hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayvideo_service)
 hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayaudio_service)
 hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayimage_service)
-
-# Add hwservice related rules
-hal_attribute_hwservice(vendor_wifidisplayhalservice, vendor_wifidisplayhalservice_hwservice)
 
 #Direct streaming native service
 add_service(vendor_wifidisplayhalservice_qti, vendor_wfdnativemm_service)
