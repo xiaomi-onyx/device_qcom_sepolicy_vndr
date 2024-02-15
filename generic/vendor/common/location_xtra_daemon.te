@@ -58,6 +58,7 @@ hwbinder_use(vendor_location_xtra_daemon)
 get_prop(vendor_location_xtra_daemon, hwservicemanager_prop)
 binder_call(vendor_location_xtra_daemon, system_server)
 binder_call(vendor_location_xtra_daemon, vendor_qms)
+binder_call(vendor_location_xtra_daemon, vendor_cacertservice_app)
 binder_use(vendor_location_xtra_daemon)
 
 # allows shell execute xtra-daemon in userdebug mode.

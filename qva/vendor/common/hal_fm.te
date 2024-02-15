@@ -28,3 +28,4 @@
 binder_call(vendor_hal_fm_client, vendor_hal_fm_server)
 binder_call(vendor_hal_fm_server, vendor_hal_fm_client)
 hal_attribute_hwservice(vendor_hal_fm, vendor_hal_fm_hwservice)
+hal_attribute_service(vendor_hal_fm, vendor_hal_fm_aidl_service)
