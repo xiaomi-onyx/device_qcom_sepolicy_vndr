@@ -208,9 +208,6 @@
 /dev/gunyah                                                          u:object_r:vendor_gunyah_dev:s0
 /dev/qgunyah                                                         u:object_r:vendor_gunyah_chr_device:s0
 
-# system health monitor node
-/dev/system_health_monitor                                           u:object_r:vendor_shm_chr_device:s0
-
 #subsys nodes
 /sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
@@ -229,6 +226,7 @@
 
 /sys/devices/platform/soc/4080000.remoteproc-mss/remoteproc/remoteproc[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/4080000.remoteproc-mss/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/4080000.remoteproc-mss/remoteproc/remoteproc[0-9]+/state u:object_r:vendor_sysfs_rproc_state:s0
 
 /sys/devices/platform/soc/3000000.remoteproc-adsp/remoteproc/remoteproc[0-9]+/name  u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/3000000.remoteproc-adsp/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0

@@ -164,6 +164,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.cvp@1\.0-service             u:object_r:vendor_cvp_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.secureprocessor@1\.0         u:object_r:vendor_hal_secureprocessor_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.secureprocessor              u:object_r:vendor_hal_secureprocessor_qti_exec:s0
+/(vendor|system/vendor)/bin/vendor\.qti\.syshealthmon-service                      u:object_r:vendor_syshealthmon_default_exec:s0
 /(vendor|system/vendor)/bin/fstman                                                 u:object_r:vendor_fstman_exec:s0
 /(vendor|system/vendor)/bin/wigighalsvc                                            u:object_r:vendor_wigighalsvc_exec:s0
 /(vendor|system/vendor)/bin/wigignpt                                               u:object_r:vendor_wigignpt_exec:s0

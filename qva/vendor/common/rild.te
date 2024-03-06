@@ -26,3 +26,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 set_prop(rild, vendor_xlat_prop)
+hal_client_domain(rild, vendor_syshealthmon)
