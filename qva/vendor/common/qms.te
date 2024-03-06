@@ -62,7 +62,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_qms, domain;
-type vendor_qms_0, domain;
+type vendor_qms_0, domain, bpfdomain;
 type vendor_qms_1, domain;
 type vendor_qms_2, domain;
 type vendor_qms_exec, exec_type, vendor_file_type, file_type;
@@ -146,6 +146,7 @@ neverallow vendor_qms ~{
 }:process dyntransition;
 
 neverallow { vendor_qms_0 vendor_qms_1 vendor_qms_2  } self:capability_class_set *;
+neverallow vendor_qms_0 vendor_qesd_socket:sock_file write;
 
 allow vendor_qms_0 vendor_qms:fd use;
 allow vendor_qms_0 vendor_qms:unix_dgram_socket write;
@@ -159,7 +160,6 @@ crash_dump_fallback(vendor_qms_0);
 allow vendor_qms_0 self:{
     qipcrtr_socket
 }create_socket_perms_no_ioctl;
-qesdk_access(vendor_qms_0)
 userdebug_or_eng(`
 get_prop(vendor_qms_0, vendor_qms_prop)
 ')
@@ -233,6 +233,10 @@ allow vendor_qms vendor_qms_app:tcp_socket { connect getopt read write };
 
 use_shsusrd_socket(vendor_qms)
 
+# allow access to vendor bpf maps
+allow vendor_qms_0 { fs_bpf_vendor }:dir search;
+allow vendor_qms_0 { fs_bpf_vendor }:file { getattr read write };
+allow vendor_qms_0 bpfloader:bpf { map_read map_write };
 
 # Policies needed for QMS
 allow vendor_qms vendor_xtra_service:service_manager find;
