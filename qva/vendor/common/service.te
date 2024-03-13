@@ -40,6 +40,7 @@ type vendor_hal_qms_service,             hal_service_type, protected_service, se
 type vendor_hal_factory_service,         hal_service_type, protected_service, service_manager_type;
 type vendor_hal_bttpi_service,           hal_service_type, protected_service, service_manager_type;
 type vendor_hal_xpanprovider_service,    hal_service_type, protected_service, service_manager_type;
+type vendor_hal_bluetooth_sar_service,   hal_service_type, protected_service, service_manager_type;
 type vendor_hal_fm_aidl_service,         hal_service_type, protected_service, service_manager_type;
 type vendor_hal_qesdhalaidl_service,     hal_service_type, service_manager_type;
 type vendor_hal_sensorscalibrateaidl_service, hal_service_type, protected_service, service_manager_type;

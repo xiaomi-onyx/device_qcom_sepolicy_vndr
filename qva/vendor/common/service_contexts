@@ -54,6 +54,7 @@ android.hardware.security.keymint.IRemotelyProvisionedComponent/strongbox u:obje
 vendor.qti.hardware.factory.IFactory/default                              u:object_r:vendor_hal_factory_service:s0
 vendor.qti.gnss.ILocAidlGnss/default                   u:object_r:hal_gnss_service:s0
 vendor.qti.hardware.bluetooth.xpanprovider.IXpanProvider/default          u:object_r:vendor_hal_xpanprovider_service:s0
+vendor.qti.hardware.bluetooth_sar.IBluetoothSar/default          u:object_r:vendor_hal_bluetooth_sar_service:s0
 vendor.qti.hardware.fm.IFmHci/default          u:object_r:vendor_hal_fm_aidl_service:s0
 vendor.qti.qesdhalaidl.IQesdhal/default                u:object_r:vendor_hal_qesdhalaidl_service:s0
 vendor.qti.hardware.sensorscalibrate.ISensorsCalibrate/default           u:object_r:vendor_hal_sensorscalibrateaidl_service:s0
