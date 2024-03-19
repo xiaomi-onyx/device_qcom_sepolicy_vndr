@@ -110,6 +110,9 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/vendor_dlkm_[ab]      u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/xbl_ramdump_[ab]      u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/spuservice_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/pdp_[ab]              u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/soccp_debug_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/soccp_dcd_[ab]        u:object_r:vendor_custom_ab_block_device:s0
 
 # Block device holding the GPT, where the A/B attributes are stored.
 /dev/block/platform/soc/1d84000.ufshc/sd[ade]                       u:object_r:vendor_gpt_block_device:s0

@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019, 2021, 2023, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2019, 2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -40,6 +40,7 @@ type vendor_hal_qms_service,             hal_service_type, protected_service, se
 type vendor_hal_factory_service,         hal_service_type, protected_service, service_manager_type;
 type vendor_hal_bttpi_service,           hal_service_type, protected_service, service_manager_type;
 type vendor_hal_xpanprovider_service,    hal_service_type, protected_service, service_manager_type;
+type vendor_hal_bluetooth_sar_service,   hal_service_type, protected_service, service_manager_type;
 type vendor_hal_fm_aidl_service,         hal_service_type, protected_service, service_manager_type;
 type vendor_hal_qesdhalaidl_service,     hal_service_type, service_manager_type;
 type vendor_hal_sensorscalibrateaidl_service, hal_service_type, protected_service, service_manager_type;
@@ -49,6 +50,7 @@ type vendor_hal_nxpnfc_service,          hal_service_type, service_manager_type;
 type vendor_hal_qconfig_service,         hal_service_type, protected_service, service_manager_type;
 type vendor_hal_perf2_service,           hal_service_type, protected_service, service_manager_type;
 type vendor_hal_vpp_service,             hal_service_type, protected_service, service_manager_type;
+type vendor_hal_hexlp_service,           hal_service_type, protected_service, service_manager_type;
 type vendor_hal_poweroptservice_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_qseecom_service,         hal_service_type, protected_service, service_manager_type;
 type vendor_tsa_hdcpvndservice,          service_manager_type;

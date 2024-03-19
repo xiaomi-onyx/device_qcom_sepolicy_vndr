@@ -26,7 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 # Define domain
@@ -54,3 +54,8 @@ set_prop(vendor_hal_display_color, vendor_qdcmss_prop);
 hal_attribute_service(vendor_hal_display_color, vendor_hal_display_color_aidl_service)
 binder_call(vendor_hal_display_color_server, servicemanager)
 hal_client_domain(platform_app, vendor_hal_display_color)
+
+#Add rules for display color aiqe AIDL HAL
+hal_attribute_service(vendor_hal_display_aiqe, vendor_hal_display_aiqe_aidl_service)
+binder_call(vendor_hal_display_aiqe_client, vendor_hal_display_aiqe_server)
+hal_server_domain(hal_graphics_composer_default, vendor_hal_display_aiqe)
