@@ -1,4 +1,4 @@
-# Copyright (c) 2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,9 +25,9 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# Changes from Qualcomm Innovation Center are provided under the following license:
+# Changes from Qualcomm Innovation Center, Inc. are provided under the following license:
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022, 2024 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -85,6 +85,12 @@ binder_call(vendor_qvrd_vndr, system_server);
 #
 # General
 #
+
+#Allow access to xrcomm service
+allow vendor_qvrd_vndr vendor_xrcommd:fd use;
+allow vendor_qvrd_vndr vendor_xrcommd:fifo_file read;
+unix_socket_connect(vendor_qvrd_vndr, vendor_xrcommd, vendor_xrcommd)
+get_prop(vendor_qvrd_vndr, vendor_xrcomm_prop)
 
 # Allow interracting with qvrd_vndr directory
 allow vendor_qvrd_vndr vendor_qvrd_vndr_data_file:dir create_dir_perms;
