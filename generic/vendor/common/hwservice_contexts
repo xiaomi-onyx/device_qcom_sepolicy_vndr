@@ -31,7 +31,6 @@
 
 com.qualcomm.qti.ant::IAntHci                                   u:object_r:hal_bluetooth_hwservice:s0
 com.dsi.ant::IAnt                                               u:object_r:hal_bluetooth_hwservice:s0
-vendor.qti.imsrtpservice::IRTPService                          u:object_r:vendor_hal_imsrtp_hwservice:s0
 vendor.qti.mstatservice::IMStatService                          u:object_r:vendor_hal_mstatservice_hwservice:s0
 vendor.qti.data.factory::IFactory                               u:object_r:vendor_hal_datafactory_hwservice:s0
 vendor.qti.hardware.cacert::IService                            u:object_r:vendor_hal_cacert_hwservice:s0
