@@ -177,6 +177,7 @@ type vendor_qesdoem_socket, file_type;
 type vendor_qesdsec_socket, file_type;
 
 type vendor_sysfs_usb_node, fs_type, sysfs_type;
+type vendor_qesdk_data_file, file_type, data_file_type;
 
 #qms
 type vendor_qms_vndr_data_file, file_type, data_file_type;

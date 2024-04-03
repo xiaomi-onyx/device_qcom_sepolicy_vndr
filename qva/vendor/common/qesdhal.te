@@ -44,6 +44,9 @@ allow vendor_hal_qesdhal_default vendor_qesdsect:file read;
 allow vendor_hal_qesdhal_default vendor_qesdsect:dir search;
 allow vendor_hal_qesdhal_default vendor_qesdsect:lnk_file read;
 
+allow vendor_hal_qesdhal_default vendor_qesdk_data_file:dir rw_dir_perms;
+allow vendor_hal_qesdhal_default vendor_qesdk_data_file:file create_file_perms;
+
 binder_call(vendor_hal_qesdhal_client, vendor_hal_qesdhal_server)
 binder_call(vendor_hal_qesdhal_server, vendor_hal_qesdhal_client)
 
