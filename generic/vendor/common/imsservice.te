@@ -76,10 +76,6 @@ hal_server_domain_bypass(vendor_ims_service, vendor_hal_imsfactory)
 binder_call(vendor_hal_imsfactory_client, vendor_hal_imsfactory_server)
 binder_call(vendor_hal_imsfactory_server, vendor_hal_imsfactory_client)
 
-hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsfactory_hwservice)
-hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsrcsd_hwservice)
-hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imscallinfo_hwservice)
-
 hal_attribute_service(vendor_hal_imsfactory, vendor_aidl_imsfactory_service)
 hal_attribute_service(vendor_hal_imsfactory, vendor_aidl_rcsservice)
 # imsdaemon needs read/write access to devpts
