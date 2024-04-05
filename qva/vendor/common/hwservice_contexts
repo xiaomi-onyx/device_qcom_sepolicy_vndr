@@ -63,7 +63,6 @@ vendor.qti.hardware.cvp::ICvp                                u:object_r:vendor_h
 vendor.qti.hardware.bluetooth_sar::IBluetoothSar             u:object_r:hal_bluetooth_hwservice:s0
 vendor.qti.hardware.wifi.hostapd::IHostapdVendor             u:object_r:hal_wifi_hostapd_hwservice:s0
 vendor.qti.hardware.bluetooth_audio::IBluetoothAudioProvidersFactory  u:object_r:hal_audio_hwservice:s0
-vendor.qti.hardware.wifi.wifilearner::IWifiStats             u:object_r:vendor_hal_wifilearner_hwservice:s0
 vendor.qti.qspmhal::IQspmhal                                 u:object_r:vendor_hal_qspmhal_hwservice:s0
 vendor.qti.hardware.secureprocessor.device::ISecureProcessor    u:object_r:vendor_hal_secureprocessor_hwservice:s0
 vendor.qti.hardware.cryptfshw::ICryptfsHw                    u:object_r:hal_keymaster_hwservice:s0
