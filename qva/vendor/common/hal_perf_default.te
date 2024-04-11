@@ -64,6 +64,7 @@ allow vendor_hal_perf {
      sysfs_devices_system_cpu
      vendor_sysfs_graphics
      proc_stat
+     proc_uptime
      sysfs_leds
      vendor_sysfs_mpctl
      vendor_sysfs_devfreq
@@ -84,6 +85,7 @@ allow vendor_hal_perf {
 allow vendor_hal_perf {
      sysfs_devices_system_cpu
      proc_stat
+     proc_uptime
      vendor_sysfs_mpctl
      vendor_sysfs_cpu_boost
      vendor_sysfs_msm_perf
