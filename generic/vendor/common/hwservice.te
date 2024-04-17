@@ -40,7 +40,6 @@ type vendor_hal_qdutils_disp_hwservice, hwservice_manager_type, protected_hwserv
 type vendor_hal_trustedui_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_capabilityconfigstore_qti_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_camera_postproc_hwservice, hwservice_manager_type, protected_hwservice;
-type vendor_hal_dspmanager_hwservice, hwservice_manager_type;
 type vendor_hal_camera_aon_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_poweroptservice_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_limits_hwservice, hwservice_manager_type, protected_hwservice;
