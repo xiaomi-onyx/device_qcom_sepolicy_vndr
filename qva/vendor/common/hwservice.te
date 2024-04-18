@@ -39,7 +39,6 @@ type vendor_hal_wigig_npt_hwservice , hwservice_manager_type, protected_hwservic
 type vendor_hal_fstman_hwservice , hwservice_manager_type, protected_hwservice;
 type vendor_hal_qteeconnector_hwservice , hwservice_manager_type, protected_hwservice;
 type vendor_hal_datafactory_hwservice, hwservice_manager_type, protected_hwservice;
-type vendor_hal_imsfactory_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_latency_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_scve_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_soter_hwservice, hwservice_manager_type, protected_hwservice;
@@ -47,7 +46,6 @@ type vendor_hal_factory_qti_hwservice, hwservice_manager_type, protected_hwservi
 type vendor_hal_cvp_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_fm_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_btconfigstore_hwservice, hwservice_manager_type, protected_hwservice;
-type vendor_hal_wifilearner_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_srvctracker_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_secureprocessor_hwservice, hwservice_manager_type, protected_hwservice;
 #untrusted_app_visible_hwservice_violators no longer needed as blacklisting of hwservice is changed

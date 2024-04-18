@@ -62,7 +62,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_qms, domain;
-type vendor_qms_0, domain;
+type vendor_qms_0, domain, bpfdomain;
 type vendor_qms_1, domain;
 type vendor_qms_2, domain;
 type vendor_qms_exec, exec_type, vendor_file_type, file_type;
@@ -71,6 +71,13 @@ init_daemon_domain(vendor_qms)
 allow vendor_qms self:capability {
     net_raw
     net_admin
+    setuid
+    setgid
+    setpcap
+};
+
+allow vendor_qms self:capability2 {
+    block_suspend
 };
 
 allow vendor_qms netutils_wrapper:process2 nnp_transition;
@@ -116,6 +123,7 @@ qtr_sdk_use(vendor_qms)
 
 userdebug_or_eng(`
 unix_socket_connect(vendor_qms, logdr, logd);
+get_prop(vendor_qms, vendor_mink_trace_prop);
 ')
 # QMS child process
 allow vendor_qms self:process setcurrent;
@@ -138,6 +146,7 @@ neverallow vendor_qms ~{
 }:process dyntransition;
 
 neverallow { vendor_qms_0 vendor_qms_1 vendor_qms_2  } self:capability_class_set *;
+neverallow vendor_qms_0 vendor_qesd_socket:sock_file write;
 
 allow vendor_qms_0 vendor_qms:fd use;
 allow vendor_qms_0 vendor_qms:unix_dgram_socket write;
@@ -151,7 +160,6 @@ crash_dump_fallback(vendor_qms_0);
 allow vendor_qms_0 self:{
     qipcrtr_socket
 }create_socket_perms_no_ioctl;
-qesdk_access(vendor_qms_0)
 userdebug_or_eng(`
 get_prop(vendor_qms_0, vendor_qms_prop)
 ')
@@ -164,6 +172,7 @@ allow vendor_qms_1 vendor_qms_other_data_file:dir create_dir_perms;
 allow vendor_qms_1 vendor_qms_other_data_file:file create_file_perms;
 allow vendor_qms_1 vendor_qms_config_data_file:dir r_dir_perms;
 allow vendor_qms_1 vendor_qms_config_data_file:file r_file_perms;
+get_prop(vendor_qms_1, vendor_qesdk_mgr_prop);
 allow vendor_qms_1 self:{
     qipcrtr_socket
 }create_socket_perms_no_ioctl;
@@ -181,6 +190,7 @@ allow vendor_qms_2 vendor_qms_other_data_file:dir create_dir_perms;
 allow vendor_qms_2 vendor_qms_other_data_file:file create_file_perms;
 allow vendor_qms_2 vendor_qms_config_data_file:dir r_dir_perms;
 allow vendor_qms_2 vendor_qms_config_data_file:file r_file_perms;
+get_prop(vendor_qms_2, vendor_qesdk_mgr_prop);
 allow vendor_qms_2 self:{
     qipcrtr_socket
 }create_socket_perms_no_ioctl;
@@ -225,6 +235,10 @@ allow vendor_qms vendor_qms_app:tcp_socket { connect getopt read write };
 
 use_shsusrd_socket(vendor_qms)
 
+# allow access to vendor bpf maps
+allow vendor_qms_0 { fs_bpf_vendor }:dir search;
+allow vendor_qms_0 { fs_bpf_vendor }:file { getattr read write };
+allow vendor_qms_0 bpfloader:bpf { map_read map_write };
 
 # Policies needed for QMS
 allow vendor_qms vendor_xtra_service:service_manager find;
@@ -232,6 +246,8 @@ binder_call(vendor_qms, vendor_location_xtra_daemon)
 allow vendor_qms vendor_sysfs_battery_supply:dir search;
 allow vendor_qms vendor_sysfs_battery_supply:file { open read };
 
+# License Manager policies for QMS
+unix_socket_connect(vendor_qms, vendor_ssgtzd, vendor_ssgtzd)
 
 #neverallow other  to write to main folders
 neverallow {

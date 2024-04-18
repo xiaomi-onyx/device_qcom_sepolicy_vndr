@@ -24,6 +24,11 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center, Inc. are provided under the following license:
+#
+# Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_hal_embmssl_qti, domain;
 type vendor_hal_embmssl_qti_exec, exec_type, vendor_file_type, file_type;
@@ -44,3 +49,11 @@ allow vendor_hal_embmssl_qti vendor_time_daemon:unix_stream_socket connectto;
 
 allow vendor_hal_embmssl_qti self:netlink_generic_socket create_socket_perms_no_ioctl;
 allow vendor_hal_embmssl_qti self:tipc_socket { create_socket_perms_no_ioctl };
+
+# Allow read access to mink socket log files
+userdebug_or_eng(`
+  get_prop(vendor_hal_embmssl_qti, vendor_mink_trace_prop)
+')
+
+# allows eMBMSSL to access ssgtzd socket
+unix_socket_connect(vendor_hal_embmssl_qti, vendor_ssgtzd, vendor_ssgtzd)

@@ -1,4 +1,4 @@
-# Copyright (c) 2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,6 +24,10 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Changes from Qualcomm Innovation Center, Inc are provided under the following license:
+# Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_sxrd_vndr, domain;
 type vendor_sxrd_vndr_exec, vendor_file_type, exec_type, file_type;
@@ -93,6 +97,15 @@ allow vendor_sxrd_vndr self:netlink_route_socket create_socket_perms_no_ioctl;
 
 #Allow access to firmware files for HDCP session
 r_dir_file(vendor_sxrd_vndr, firmware_file)
+
+#Allow access to xrcomm service
+allow vendor_sxrd_vndr vendor_xrcommd:fd use;
+allow vendor_sxrd_vndr vendor_xrcommd:fifo_file { read write };
+unix_socket_connect(vendor_sxrd_vndr, vendor_xrcommd, vendor_xrcommd)
+get_prop(vendor_sxrd_vndr, vendor_xrcomm_prop)
+
+#Allow access to read property
+get_prop(vendor_sxrd_vndr, vendor_sxr_prop)
 
 #add sxrd to access tombstoned
 userdebug_or_eng(`
