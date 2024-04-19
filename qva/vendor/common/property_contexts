@@ -161,3 +161,6 @@ persist.vendor.data.qms.                     u:object_r:vendor_qms_prop:s0
 
 #UWB
 persist.vendor.qti.uwb.                      u:object_r:vendor_uwb_prop:s0
+
+#DCF
+ro.vendor.dcf.wake_lock.                     u:object_r:vendor_dcf_prop:s0 prefix
