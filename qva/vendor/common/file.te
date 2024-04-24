@@ -50,6 +50,9 @@ type vendor_ssgqmig_socket, file_type, mlstrustedobject;
 type vendor_ssgtzd_socket, file_type, mlstrustedobject;
 type vendor_ssgtzd_opener_socket, file_type, mlstrustedobject;
 
+#hlos mink daemon socket
+type vendor_hlos_minkd_opener_socket, file_type, mlstrustedobject;
+
 #spunvm file types
 type vendor_spunvm_file, file_type, vendor_spunvm_file_type;
 allow vendor_spunvm_file self:filesystem associate;
