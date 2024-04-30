@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019-2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,10 +24,25 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
+
 # Changes from Qualcomm Innovation Center are provided under the following license:
-#
-# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-allow rild vendor_shm_chr_device:chr_file r_file_perms;
+type vendor_syshealthmon_default, domain;
+type vendor_syshealthmon_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_syshealthmon_default)
+hal_server_domain(vendor_syshealthmon_default, vendor_syshealthmon)
+
+binder_call(vendor_syshealthmon_client, vendor_syshealthmon_server)
+binder_call(vendor_syshealthmon_server, vendor_syshealthmon_client)
+
+hal_attribute_service(vendor_syshealthmon, vendor_syshealthmon_service)
+binder_call(vendor_syshealthmon_default, servicemanager)
+
+allow vendor_syshealthmon self:qipcrtr_socket create_socket_perms_no_ioctl;
+allow vendor_syshealthmon vendor_sysfs_ssr:file r_file_perms;
+allow vendor_syshealthmon vendor_sysfs_rproc_state:file rw_file_perms;
+
+userdebug_or_eng(`allow vendor_syshealthmon debugfs:dir r_dir_perms');
