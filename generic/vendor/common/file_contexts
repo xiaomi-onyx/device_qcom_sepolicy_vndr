@@ -671,3 +671,7 @@
 
 # CHRE
 /vendor/bin/hw/android\.hardware\.contexthub-service\.qmi                             u:object_r:hal_contexthub_default_exec:s0
+
+#C2PA
+/vendor/bin/hw/vendor.qti.hardware.c2pa-aidl-service-qti u:object_r:vendor_hal_c2pa_qti_exec:s0
+/vendor/bin/C2PAInternetService u:object_r:vendor_c2painternetservice_exec:s0
