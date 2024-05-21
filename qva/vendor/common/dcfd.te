@@ -18,3 +18,6 @@ crash_dump_fallback(vendor_dcfd)
 
 # Allow to request wakelock from system-suspend.
 wakelock_use(vendor_dcfd)
+
+# DCF Wake Lock properties
+get_prop(vendor_dcfd, vendor_dcf_prop)
