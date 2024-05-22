@@ -26,6 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 type vendor_snapcam_app, domain;
 hal_client_domain(vendor_snapcam_app, vendor_hal_perf);
+hal_client_domain(vendor_snapcam_app, vendor_hal_c2pa);
 app_domain(vendor_snapcam_app);
 
 allow vendor_snapcam_app cameraserver_service:service_manager find;
