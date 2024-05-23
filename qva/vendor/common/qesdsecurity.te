@@ -18,3 +18,8 @@ crash_dump_fallback(vendor_qesdsect);
 
 #allow qesdsec to read boot complete prop
 get_prop(vendor_qesdsect, boot_status_prop)
+
+#allow read access to mink socket log files
+userdebug_or_eng(`
+  get_prop(vendor_qesdsect, vendor_mink_trace_prop)
+')
