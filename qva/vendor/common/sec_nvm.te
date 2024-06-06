@@ -36,6 +36,8 @@ qhdc_sdk_use(vendor_sec_nvm)
 allow vendor_sec_nvm ion_device:chr_file rw_file_perms;
 allow vendor_sec_nvm vendor_skp_device:chr_file { getattr rw_file_perms };
 
+allow vendor_sec_nvm tee_device:chr_file rw_file_perms;
+
 allow vendor_sec_nvm mnt_vendor_file:dir search;
 allow vendor_sec_nvm vendor_persist_secnvm_file:dir rw_dir_perms;
 allow vendor_sec_nvm vendor_persist_secnvm_file:file create_file_perms;
@@ -47,6 +49,11 @@ get_prop(vendor_sec_nvm, vendor_disable_spu_prop)
 
 # UFS
 allow vendor_sec_nvm vendor_sysfs_scsi_host:file rw_file_perms;
+
+# Allow allocate from  QSEE<=>SPU share buffers
+allow vendor_sec_nvm vendor_dmabuf_secure_sp_tz_heap_device:chr_file r_file_perms;
+allow vendor_sec_nvm vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_sec_nvm vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
 
 # Allow to allocate HLOS<=>SP share buffers for loading SP apps (r_file_perms includes ioctl)
 allow vendor_sec_nvm vendor_dmabuf_sp_hlos_heap_device:chr_file r_file_perms;
