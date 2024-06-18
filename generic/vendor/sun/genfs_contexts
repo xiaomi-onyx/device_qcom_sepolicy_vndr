@@ -250,6 +250,7 @@ genfscon sysfs /devices/virtual/fastrpc/fastrpc-adsp-secure/wakeup25 u:object_r:
 genfscon sysfs /devices/virtual/fastrpc/fastrpc-cdsp-secure/wakeup25 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/fastrpc/fastrpc-sdsp-secure/wakeup25 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c00000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/mhi_110e_00.01.00/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c00000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/mhi_1107_00.01.00/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/3000000.remoteproc-adsp/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup u:object_r:sysfs_wakeup:s0
