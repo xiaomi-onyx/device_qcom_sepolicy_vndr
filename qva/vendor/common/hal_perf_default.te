@@ -56,7 +56,7 @@ allow vendor_hal_perf_default proc_meminfo:file r_file_perms;
 allow vendor_hal_perf_default self:netlink_generic_socket create_socket_perms_no_ioctl;
 allow vendor_hal_perf_default {appdomain}:process getpgid;
 hal_client_domain(vendor_hal_perf_default, vendor_hal_srvctracker);
-hal_client_domain(vendor_hal_perf_default, vendor_hal_iop);
+hal_client_domain(vendor_hal_perf_default, vendor_hal_MemHal);
 r_dir_file(vendor_hal_perf_default, appdomain);
 allow vendor_hal_perf_default {appdomain}:file rw_file_perms;
 allow vendor_hal_perf_default configfs:dir { search };
@@ -64,6 +64,7 @@ allow vendor_hal_perf_default configfs:file { open write read };
 
 allow vendor_hal_perf {
      sysfs_devices_system_cpu
+     sysfs_suspend_stats
      vendor_sysfs_graphics
      proc_stat
      proc_uptime
@@ -115,6 +116,9 @@ allow vendor_hal_perf {
     vendor_sysfs_scsi_host
     vendor_sysfs_kgsl
 }:lnk_file r_file_perms;
+
+# Allow perf HAL to read suspend stats sysfs nodes
+allow vendor_hal_perf sysfs_suspend_stats:file r_file_perms;
 
 # Allow to self kill capability
 allow vendor_hal_perf_default self:capability { kill };
