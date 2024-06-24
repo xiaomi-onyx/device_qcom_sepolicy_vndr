@@ -57,3 +57,7 @@
 
 # UWB Q2SPI device
 /dev/q2spiuwbtest                               u:object_r:vendor_q2spiuwbtest_device:s0
+
+# ppat_stats files
+/vendor/bin/ppat_stats           u:object_r:vendor_ppat_stats_exec:s0
+/data/vendor/ppat_stats(/.*)?    u:object_r:vendor_ppat_stats_data_file:s0
