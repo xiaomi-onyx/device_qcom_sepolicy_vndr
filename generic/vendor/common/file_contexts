@@ -260,6 +260,7 @@
 /vendor/bin/nicmd               u:object_r:vendor_nicmd_exec:s0
 /vendor/bin/qti                 u:object_r:vendor_qti_exec:s0
 /vendor/bin/qsap_voiceui        u:object_r:vendor_vui_dmgr_exec:s0
+/vendor/bin/wifi_qos_daemon     u:object_r:vendor_wifi_qos_daemon_exec:s0
 ## Context for location features - start
 /vendor/bin/loc_launcher        u:object_r:vendor_location_exec:s0
 /vendor/bin/lowi-server         u:object_r:vendor_location_lowi_server_exec:s0
