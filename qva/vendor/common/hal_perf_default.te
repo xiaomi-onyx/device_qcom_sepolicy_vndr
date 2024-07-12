@@ -134,6 +134,9 @@ set_prop(vendor_hal_perf_default, vendor_procomp_prop)
 #Allow Display Config access
 hal_client_domain(vendor_hal_perf_default, hal_graphics_composer);
 
+#allow thermal service to receive perf callback
+binder_call(vendor_hal_perf_default, vendor_qt_service)
+
 #Allow qms HAL
 qhdc_sdk_use(vendor_hal_perf_default);
 
