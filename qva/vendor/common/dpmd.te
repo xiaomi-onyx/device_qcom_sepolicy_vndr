@@ -31,7 +31,7 @@ use_netutils(vendor_dpmd)
 get_prop(vendor_dpmd, vendor_persist_dpm_prop)
 
 wakelock_use(vendor_dpmd)
-
+dontaudit vendor_dpmd vendor_hal_dpmqmi_hwservice:hwservice_manager find;
 r_dir_file(vendor_dpmd, vendor_sysfs_data)
 
 hal_client_domain(vendor_dpmd,vendor_hal_dpmqmiservice_qti)
